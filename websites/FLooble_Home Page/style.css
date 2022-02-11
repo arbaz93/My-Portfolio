@@ -1,0 +1,326 @@
+body {
+    background-color: #282C34;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+nav {
+    display: table;
+    width: 100%;
+    margin: 0 0 0 0;
+    transition: linear .2s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fa-bars {
+    display: none;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    padding: 10px;
+    transition: ease .1s;
+}
+.fa-bars:hover{
+    color: #282C34;
+}  
+
+ul {
+    display: table-cell;
+}
+ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: ease .1s;
+}
+nav ul li a:hover{
+    color: #707070;
+}  
+.left-nav {
+    width: 50%;
+}
+.left-nav li a {
+    padding: 25.8px 43px 0 20px;
+}
+.right-nav{
+    width: 50%;
+    text-align: right;
+}
+.right-nav li a{
+    width: 40%;
+    margin-right: 37px;
+}
+ img{
+    width: 47.5px;
+    height: 47.5px;
+    border-radius: 50%;
+    position: relative;
+    top: 18;
+    margin-right: 26.5px;
+}
+.grid {
+    font-size: 2.2em;
+    position: relative;
+    top: 8;
+}
+
+/*************** Header ****************/
+header {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 40%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+.flooble { /* head font */
+    font-family: poppins;
+    font-size: 3.15em;
+    letter-spacing: 17px;
+    color: white;
+    text-align: center;
+    display: block;;
+}
+.flooble span {
+    color: #3BB99B;
+}
+
+header #input-bar {
+    background: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #282C34;
+    border-radius: 37px;
+    width: 55.5%;
+    /* width: 851; */
+    height:66px;
+    font-size: 18px;
+    border: none;
+    outline: none !important ;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+header #input-bar:focus {
+    box-shadow: 0px 0px 10px 5px rgb(100, 100, 100);
+}
+header .input-form i{
+    position: absolute;
+}
+header .input-form {
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+.fa-search {
+    color:#9E9E9E;
+    font-size: 25px;
+    min-width: 50px;
+    padding: 21px 0 25px 15px;
+}
+.fa-microphone {
+    font-size: 25px;
+    color: #3BB99B;
+    margin: 21px 0 25px 0;
+    padding-right:50px !important;
+    cursor: pointer;
+    right: 21%;
+}
+.btns {
+    display: inline-block;
+    
+}
+ button {
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: none;
+    color: #707070;
+    font-size: 22px;
+    width: 258;
+    height: 72px;
+    text-align: center;
+    margin: 51px 0 0 0 ;
+    cursor: pointer;
+    -webkit-transition: background-color .1s linear;
+    -ms-transition: background-color .1s linear;
+    transition: background-color .1s linear;
+
+}
+button:hover {
+    background-color: #dfdfdf;
+}
+button:active {
+    background-color: #c6c6c6;
+}
+#search-btn {
+    margin-right: 40px;
+}
+
+/* ******END HEADER******* */
+footer {
+    width: 100%;
+    height: 71px;
+    display: table;
+    position: absolute ;
+    bottom: 0;
+    background-color: #707793;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+footer .left-foot {
+    display: table-cell;
+    padding: 25.8px 41px 0 20px;
+}
+footer .right-foot {
+    text-align: right;
+    display: table-cell;
+    padding: 25.8px 24px 0 0;
+}
+footer ul li {
+    text-decoration: none;
+    color: white;
+    padding: 0 24px 0 10px;
+}
+/* TABLET VIEW */
+@media only screen and (max-width: 1024px) {
+    .fa-bars {
+        display: block;
+        position: absolute;
+        z-index: 2;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        background: #707793;
+        width: 100%;
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        z-index: 1;
+    }
+    nav ul {
+        display: initial;
+    }
+    nav ul li {
+        display: initial;
+    }
+    nav ul li a:hover{
+        color: #282C34;
+    }  
+    .left-nav {
+        width: 100%;
+        padding: 0;
+    }
+    .left-nav li a {
+        display: block;
+        text-align: center;
+        margin: auto;
+        width: 30%;
+        padding: 25.8px 20px 0 20px;
+    }
+    .right-nav{
+        padding: 0;
+        margin: 0;
+    }
+    .right-nav li a{
+        display: block;
+        margin: auto;
+        text-align: center;
+        width: 30%;
+        padding: 25.8px 24px 0 26px;
+    }
+    .profile-image{
+        position: absolute;
+        height: auto;
+        right: 0;
+        top: -4%;
+        /* margin-right: 26.5px; */
+    }
+    .grid {
+        display: none;
+        width: auto;
+        position: absolute;   
+        right: 0;
+        top: 5%  
+    }
+
+    header {
+        top: 45%;
+      }
+      header #input-bar {
+        width: 80%;
+        height: 52px;
+      }
+      .fa-search {
+        padding-top: 16px;
+        padding-left: 0;
+        font-size: 20px;
+    }
+     .fa-microphone {
+        right: 5.5%;
+        margin-top: 16px;
+        margin-right: 14px;
+        font-size: 20px;
+      }
+  }
+  @media only screen and (max-width: 690px) {
+      .flooble {
+          font-size: 2em;
+      }
+      header #input-bar {
+          width: 93%;
+          height: 46px;
+      }
+      .fa-search {
+        padding-top: 15px;
+        padding-left: 0;
+        font-size: 18px;
+    }
+      .fa-microphone {
+          display: none ;
+      }
+      #search-btn {
+        margin-right: 0;
+    }
+    footer {
+        height: auto;  
+    }
+    footer .left-foot {
+        display: block;
+        text-align: center;
+    }
+    footer .right-foot {
+        text-align: center;
+        display: block;
+        padding: 25.8px 24px 0 0;
+    }
+  }
+  @media only screen and (max-width: 514px) {
+    .flooble {
+        font-size: 1em;
+    }
+    header #input-bar {
+        width: 98%;
+    }
+    .fa-microphone {
+        margin-left: 90%;
+    }
+    #search-btn {
+        margin-right: 0;
+  }
+    button {
+        margin-top: 10px;
+
+    }
+    .grid {
+        right: 12%;
+
+    }
+}
+  

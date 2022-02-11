@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tea Ceremony</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(85, 85, 85);
+      }
+      .source {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 50%;
+        position: relative;
+        left: -100px;
+        top: -100px;
+      }
+      .source div {
+        z-index: 0;
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        border-radius: 20px;
+        /* transform-origin: 0  ; */
+        background-color: yellow;
+      }
+      .source div:nth-child(1) {
+        right: -27%;
+        top: 50%;
+        transform: rotate(180deg);
+      }
+      .source div:nth-child(2) {
+        right: -26%;
+        top: 60%;
+        transform: rotate(-176deg);
+      }
+      .source div:nth-child(3) {
+        right: -23%;
+        top: 70%;
+        transform: rotate(-175deg);
+      }
+      .source div:nth-child(4) {
+        right: -17%;
+        top: 81%;
+        transform: rotate(-170deg);
+      }
+      .source div:nth-child(5) {
+        right: -7%;
+        top: 93%;
+        transform: rotate(-160deg);
+      }
+      .source div:nth-child(6) {
+        right: 10px;
+        bottom: -10px;
+        transform: rotate(-130deg);
+      }
+      .source div:nth-child(7) {
+        right: 40px;
+        bottom: -24px;
+        transform: rotate(-100deg);
+      }
+      .source div:nth-child(8) {
+        right: 70px;
+        bottom: -30px;
+        transform: rotate(90deg);
+      }
+        
+      .cup {
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* overflow: hidden; */
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        border-radius: 25%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        transform: translate(-50%, -50%);
+        -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.1);
+        -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.1);
+        box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.1);
+      }
+
+      .cup::after {
+        content: "";
+        position: absolute;
+        top: -10%;
+        background-color: #f5f7fa;
+        /* border: 1px black solid; */
+        width: 100%;
+        z-index: 1;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .holder {
+        /* z-index: ; */
+        background: transparent;
+        width: 100px;
+        height: 100px;
+        border: 25px solid rgba(245, 247, 250, 1);
+        position: absolute;
+        left: calc(50% + 80px);
+        top: 50%;
+        margin-top: -75px;
+        border-radius: 100px;
+      }
+      .holder::before {
+        content: '';
+        transform-style: preserve-3d;
+        perspective: 100px;
+        z-index: 1;
+        width: 100px;
+        height: 100px;
+        border: 25px solid rgba(245, 247, 250, .6);
+        /* border: 25px solid #72a5f1; */
+        position: absolute;
+        left: -27%;
+        top: 49%;
+        margin-top: -75px;
+        border-radius: 100px;
+        /* -webkit-box-shadow: 1px 1px 0px 6px #BEBEBE;  */
+        /* box-shadow: inset 2px 1px 1px .1px #000000; */
+      }
+      .holder::after {
+        content: '';
+        transform-style: preserve-3d;
+        perspective: 100px;
+        z-index: 0;
+        width: 100px;
+        height: 100px;
+        border: 25px solid rgba(245, 247, 250, .4);
+        /* border: 25px solid #8e30aa; */
+        position: absolute;
+        left: -26%;
+        top: 50%;
+        margin-top: -75px;
+        border-radius: 100px;
+        /* -webkit-box-shadow: 1px 1px 0px 6px #BEBEBE;  */
+        /* box-shadow: inset 2px 1px 1px .1px #000000; */ 
+      }
+      canvas {
+        background-color: white;
+        padding: 200px;
+      }
+    </style>
+    <div class="source">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <canvas width="400" height="400"></canvas>
+    <div class="holder"></div>
+    <div class="cup"></div>
+    <script>
+      var canvas = document.querySelector('canvas');
+      var ctx = canvas.getContext('2d');
+      
+      let i = 0;  
+      var r = setInterval(roundy, 30)
+      function roundy() {
+        let x = Math.floor((Math.random() * 400) + 1);
+        let y = Math.floor((Math.random() * 400) + 1);
+        i++;
+        var xCord = 0;
+        var yCord = 0;
+        ctx.fillStyle;
+        ctx.strokeStyle = '#' + x + y + x;
+        // ctx.fillRect(x, y, 40, 40);
+        ctx.beginPath();
+        ctx.moveTo(xCord, yCord);
+        ctx.lineTo(x, y + 20);
+        ctx.stroke();
+        xCord =  x;
+        yCord = y;
+        console.log(x, xCord , y , yCord)
+        if(i > 200){
+        myStopFunction()
+        } 
+      }
+      function myStopFunction() {
+        clearInterval(r);
+      }
+         
+    </script>
+  </body>
+</html>
